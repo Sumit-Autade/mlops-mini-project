@@ -1,0 +1,4 @@
+[core]
+    remote = mini-project
+['remote "mini-project"']
+    url = C:\Users\user\AppData\Local\Temp
