@@ -15,8 +15,6 @@ import os
 mlflow.set_tracking_uri('https://dagshub.com/Sumit-Autade/mlops-mini-project.mlflow')
 dagshub.init(repo_owner='Sumit-Autade', repo_name='mlops-mini-project', mlflow=True)
 
-
-
 # logging configuration
 logger = logging.getLogger('model_evaluation')
 logger.setLevel('DEBUG')
