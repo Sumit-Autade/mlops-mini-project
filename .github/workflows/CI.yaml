@@ -30,3 +30,9 @@ jobs:
           DAGSHUB_PAT: ${{ secrets.DAGSHUB_PAT }} #this is the flow where in github action it will take the dagshub token from my github secret and use it when is is required. crearte a dagshub token and add it into github secrets and varaible so that you can use it anytime through this code   
         run: |
           dvc repro
+
+      - name: run model test
+        env: 
+          DAGSHUB_PAT: ${{ secrets.DAGSHUB_PAT }}
+        run: |
+          python -m unittest tests/test_model.py 
