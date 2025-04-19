@@ -54,7 +54,7 @@ def register_model(model_name: str, model_info: dict):
         client.transition_model_version_stage(
             name=model_name,
             version=model_version.version,
-            stage="Staging"
+            stage="Production"
         )
         
         logger.debug(f'Model {model_name} version {model_version.version} registered and transitioned to Staging.')

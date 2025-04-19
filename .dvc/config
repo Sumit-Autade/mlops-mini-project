@@ -1,4 +1,4 @@
 [core]
-    remote = mini-project
-['remote "mini-project"']
-    url = C:\Users\user\AppData\Local\Temp
+    remote = myremote
+['remote "myremote"']
+    url = s3://sumit-demo-bucket
