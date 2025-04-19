@@ -3,7 +3,7 @@ name: Emotion-detection CI pipeline
 on: push
 
 jobs:
-  project testing:
+  run-dvc-pipeline:
   
     runs-on: ubuntu-latest
     steps:
