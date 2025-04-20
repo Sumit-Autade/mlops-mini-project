@@ -59,7 +59,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
      
       - name: build docker image    
-        if.success()
+        if: success()
         run: |
           docker built -t ${{ secrets.DOCKER_HUB_USERNAME }}/emotion2:latest .
 
