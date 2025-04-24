@@ -70,13 +70,13 @@ jobs:
 
       - name: deploy EC2
         if: success()
-        user: appleboy/ssh-action@v0.1.5
+        uses: appleboy/ssh-action@v0.1.5
         with:
           host: ${{ secrets.EC2_HOST}}
-          user: ${{ secrets.EC2_USER }}
+          username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY}}
 
-          scripts: |
+          script: |
             docker pull ${{ secrets.DOCKER_HUB_USERNAME }}/emotion2:latest
             docker stop my-app || true  
             docker rm my-app ||  true 
